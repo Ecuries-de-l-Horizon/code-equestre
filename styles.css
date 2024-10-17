@@ -1,0 +1,84 @@
+/* styles.css */
+
+body {
+    background-color: #FFFFFF; /* Fond blanc pour une meilleure lisibilité */
+    font-family: 'Arial', sans-serif;
+    color: #4F2200; /* Texte principal en marron foncé */
+}
+
+h1 {
+    color: #BC5D2E; /* Rouge brique pour les titres */
+    text-align: center;
+    padding: 20px;
+    background-color: #FCCA46; /* Fond jaune clair */
+    border-radius: 10px;
+}
+
+table.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #BC5D2E; /* Fond marron du tableau */
+    border: 2px solid #4F2200; /* Bordure du tableau en marron foncé */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table.dataTable thead {
+    background-color: #BC5D2E; /* Fond marron pour les en-têtes */
+}
+
+table.dataTable thead th {
+    color: #FFFFFF; /* Texte blanc pour les en-têtes */
+    text-align: center;
+    padding: 10px;
+}
+
+table.dataTable tbody tr {
+    background-color: #BC5D2E; /* Fond marron pour toutes les lignes */
+    color: #000000; /* Texte en noir pour les lignes */
+}
+
+table.dataTable tbody td {
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #EB5C1E; /* Bordure des cellules en orange */
+    color: #000000; /* Texte en noir pour les cellules */
+}
+
+table.dataTable tbody tr:hover {
+    background-color: #FCCA46; /* Jaune clair au survol des lignes */
+    color: #4F2200; /* Texte marron foncé au survol */
+}
+
+/* Style des champs de recherche et de pagination */
+.dataTables_filter input {
+    border: 2px solid #4F2200; /* Bordure marron foncé */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background-color: #BC5D2E; /* Rouge brique pour les boutons de pagination */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #EB5C1E; /* Orange au survol des boutons */
+    color: #FFFFFF;
+}
+
+/* Style pour le champ "Afficher X entrées" */
+.dataTables_length select {
+    border: 1px solid #BC5D2E; /* Bordure rouge brique */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Style des informations supplémentaires comme "Affichage de... à..." */
+.dataTables_info {
+    color: #4F2200; /* Texte marron foncé */
+}
