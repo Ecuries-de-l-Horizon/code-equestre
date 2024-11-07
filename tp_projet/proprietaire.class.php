@@ -3,8 +3,8 @@ include("responsable.class.php");
 
 class Proprietaire extends Cavalier{
     private $assurance;
-    public function __construct($id_cavalier, $nom_cav, $prenom_cav, $numlicence, $photo, $datena,$assurance){
-        parent::__construct($id_cavalier, $nom_cav, $prenom_cav, $numlicence, $photo, $datena);
+    public function __construct($id_cavalier, $nom_cav, $prenom_cav, $numlicence, $photo, $datena, $idgalop, $assurance){
+        parent::__construct($id_cavalier, $nom_cav, $prenom_cav, $numlicence, $photo, $datena, $idgalop);
         $this->assurance = $assurance;
     }
     public function get_assurance(){
@@ -13,10 +13,22 @@ class Proprietaire extends Cavalier{
     public function set_assurance($assurance){
         $this->assurance = $assurance;
     }
-    public function test($id_cavalier){
-        if($id_cavalier == "$test_res.id_cavalier"){
-            $obj_merged = (object) array_merge(
-                (array) self, (array) $test_res);
-        }
+    public function prop_ajout($a, $b, $c, $d, $e, $f,$g, $con){
+        $sql = "INSERT INTO cavalier (nomcav, prenomcav, numlicence, photo, datena, idgalop, assurance)
+                    VALUES (:nomcav, :prenomcav, :numlicence, :photo, :datena, :idgalop, :assurance)";
+        $stmt = $con->prepare($sql);
+
+            $data = [
+                ':nomcav' => $a,
+                ':prenomcav' => $b,
+                ':numlicence' => $c,
+                ':photo' => $d,
+                ':datena' => $e,
+                ':idgalop' => $f,
+                ':assurance' => $g
+            ];
+        
+        $stmt->execute($data);
+            echo "Client inséré avec succès dans la base de données.<br>";
     }
 }

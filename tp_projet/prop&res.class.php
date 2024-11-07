@@ -1,6 +1,7 @@
 <?php
-include("cavalier.class.php");
-class Responsable extends Cavalier{
+include("responsable.class.php");
+
+class Prop_res extends Cavalier{
     private $nom_res;
     private $prenom_res;
     private $rue_res;
@@ -8,7 +9,8 @@ class Responsable extends Cavalier{
     private $tel_res;
     private $email_res;
     private $mdp_res;
-    public function __construct($id_cavalier, $nom_cav, $prenom_cav, $numlicence, $photo, $datena, $idgalop,$nom_res,$prenom_res,$rue_res,$cp_res,$tel_res,$email_res,$mdp_res){
+    private $assurance;
+    public function __construct($id_cavalier, $nom_cav, $prenom_cav, $numlicence, $photo, $datena, $idgalop, $nom_res,$prenom_res,$rue_res,$cp_res,$tel_res,$email_res,$mdp_res, $assurance){
         parent::__construct($id_cavalier, $nom_cav, $prenom_cav, $numlicence, $photo, $datena, $idgalop);
         $this->nom_res=$nom_res;
         $this->prenom_res=$prenom_res;
@@ -17,6 +19,7 @@ class Responsable extends Cavalier{
         $this->tel_res=$tel_res;
         $this->email_res=$email_res;
         $this->mdp_res=$mdp_res;
+        $this->assurance = $assurance;
     }
     public function getNom_Res(){
         return $this->nom_res;
@@ -39,10 +42,16 @@ class Responsable extends Cavalier{
     public function getMdp_res(){
         return $this->mdp_res;
     }
+    public function get_assurance(){
+        return $this->assurance;
+    }
+    public function set_assurance($assurance){
+        $this->assurance = $assurance;
+    }
 
-    public function res_ajout($a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l, $m, $con){
-        $sql = "INSERT INTO cavalier (nomcav, prenomcav, numlicence, photo, datena, idgalop, nomres,prenomres,rueres,cpres,telres,mailres,mdp)
-                    VALUES (:nomcav, :prenomcav, :numlicence, :photo, :datena, :idgalop, :nomres, :prenomres, :rueres, :cpres, :telres, :mailres, :mdp)";
+    public function pr_ajout($a, $b, $c, $d, $e, $f, $g, $h, $i, $j, $k, $l, $m, $n, $con){
+        $sql = "INSERT INTO cavalier (nomcav, prenomcav, numlicence, photo, datena, idgalop, nomres,prenomres,rueres,cpres,telres,mailres,mdp, assurance)
+                    VALUES (:nomcav, :prenomcav, :numlicence, :photo, :datena, :idgalop, :nomres, :prenomres, :rueres, :cpres, :telres, :mailres, :mdp, :assurance)";
         $stmt = $con->prepare($sql);
 
             $data = [
@@ -58,7 +67,8 @@ class Responsable extends Cavalier{
                 ':cpres' => $j,
                 ':telres'=> $k,
                 ':mailres' => $l,
-                ':mdp' => $m
+                ':mdp' => $m,
+                ':assurance' => $n
             ];
         
         $stmt->execute($data);

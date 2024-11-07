@@ -8,7 +8,6 @@ class Cavalerie{
     private $id_race;
     private $id_robe;
     private $id_photo;
-    //id_pention à ajouter ici
     public function __construct($Numsire, $nom_cheval, $datenacheval, $garot, $id_race, $id_robe, $id_photo){
         $this->Numsire = $Numsire;
         $this->nom_cheval = $nom_cheval;
@@ -56,5 +55,24 @@ class Cavalerie{
     }
     public function set_id_photo( $id_photo ){
         $this->id_photo = $id_photo;
+    }
+    //crud
+    public function cavalerie_ajout($a, $b, $c, $d, $e, $f, $g, $con){
+        $sql = "INSERT INTO cavalier (numsir, nomcheval, datenacheval, garot, idrace, idrobe, photo)
+                    VALUES (:numsir, :nomcheval, :datenacheval, :garot, :idrace, :idrobe, :photo)";
+        $stmt = $con->prepare($sql);
+
+            $data = [
+                ':numsir' => $a,
+                ':nomcheval' => $b,
+                ':datenacheval' => $c,
+                ':garot' => $d,
+                ':idrace' => $e,
+                ':idrobe' => $f,
+                ':photo' => $g
+            ];
+        
+        $stmt->execute($data);
+            echo "Client inséré avec succès dans la base de données.<br>";
     }
 }

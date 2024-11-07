@@ -41,4 +41,20 @@ class Cours{
     public function set_jour($jour) {
         $this->jour = $jour;
     }
+    //crud
+    public function cours_ajout($a, $b, $c, $d, $con){
+        $sql = "INSERT INTO cavalier (libcours, hd, hf, jour)
+                    VALUES (:libcours, :hd, :hf, :jour)";
+        $stmt = $con->prepare($sql);
+
+            $data = [
+                ':libcours' => $a,
+                ':hd' => $b,
+                ':hf' => $c,
+                ':jour' => $d,
+            ];
+        
+        $stmt->execute($data);
+            echo "Client inséré avec succès dans la base de données.<br>";
+    }
 }
