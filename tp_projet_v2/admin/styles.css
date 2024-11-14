@@ -1,0 +1,166 @@
+/* styles.css */
+
+body {
+    background-color: #FFFFFF; /* Fond blanc pour une meilleure lisibilité */
+    font-family: 'Arial', sans-serif;
+    color: #4F2200; /* Texte principal en marron foncé */
+}
+
+h1 {
+    color: #BC5D2E; /* Rouge brique pour les titres */
+    text-align: center;
+    padding: 20px;
+    background-color: #FCCA46; /* Fond jaune clair */
+    border-radius: 10px;
+}
+body {
+    background-color: #BC5D2E; /* Fond jaune clair */
+}
+
+table.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #BC5D2E; /* Fond marron du tableau */
+    border: 2px solid #4F2200; /* Bordure du tableau en marron foncé */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table.dataTable thead {
+    background-color: #BC5D2E; /* Fond marron pour les en-têtes */
+}
+
+table.dataTable thead th {
+    color: #FFFFFF; /* Texte blanc pour les en-têtes */
+    text-align: center;
+    padding: 10px;
+}
+
+table.dataTable tbody tr {
+    background-color: #BC5D2E; /* Fond marron pour toutes les lignes */
+    color: #262626; /* Texte en noir pour les lignes */
+}
+
+table.dataTable tbody td {
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #EB5C1E; /* Bordure des cellules en orange */
+    color: #262626; /* Texte en noir pour les cellules */
+}
+
+table.dataTable tbody tr:hover {
+    background-color: #FCCA46; /* Jaune clair au survol des lignes */
+    color: #4F2200; /* Texte marron foncé au survol */
+}
+
+/* Style des champs de recherche et de pagination */
+.dataTables_filter input {
+    border: 2px solid #4F2200; /* Bordure marron foncé */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background-color: #BC5D2E; /* Rouge brique pour les boutons de pagination */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #EB5C1E; /* Orange au survol des boutons */
+    color: #FFFFFF;
+}
+
+/* Style pour le champ "Afficher X entrées" */
+.dataTables_length select {
+    border: 1px solid #BC5D2E; /* Bordure rouge brique */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Style des informations supplémentaires comme "Affichage de... à..." */
+.dataTables_info {
+    color: #4F2200; /* Texte marron foncé */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.principale {
+    color: #FFFFFF;
+    text-align: center;
+    background: #06D2FE;
+    float: top;
+    margin: 0;
+    padding: 0;
+}
+.carre {
+    width: 750px;
+    height: 50px;
+    background-color: #202020;
+}
+
+nav{
+    margin: 0;
+    width: 100%;
+    background: #202020;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.special{ 
+float: left; 
+text-decoration: none; 
+color: #BC5D2E; 
+background: #202020; 
+height: 55px;
+width: 50px ;
+line-height: 50px;
+font-family: sans-serif; 
+font-size: 13px;
+width: 10%;
+}
+.special:hover{ 
+background: #BC5D2E; 
+color: #FFFFFF
+}
+
+img:hover{
+    background: #BC5D2E;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #202020;
+  color: #fff;
+}
+
+table,
+td {
+  border: 5px solid #000000;
+  background-color: #FFFFFF;
+}
+
+.important{
+    background-color: #202020;
+    color: #FFFFFF;
+}
+
+thead,
+tfoot {
+  background-color: #202020;
+  color: #101010;
+}
+
+input {
+    background-color: #BC5D2E;
+    border-color: #101010;
+}
