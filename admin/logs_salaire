@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mise à jour du salaire</title>
+</head>
+<body>
+
+<h2>Mettre à jour le salaire d'un employé</h2>
+
+<form action="update_salary.php" method="POST">
+    <label for="idemp">ID Employé:</label><br>
+    <input type="number" id="idemp" name="idemp" required><br><br>
+    
+    <label for="nouveau_salaire">Nouveau salaire:</label><br>
+    <input type="number" id="nouveau_salaire" name="nouveau_salaire" step="0.01" required><br><br>
+    
+    <label for="raison">Raison de la mise à jour:</label><br>
+    <textarea id="raison" name="raison" rows="4" cols="50" required></textarea><br><br>
+
+    <input type="submit" value="Mettre à jour le salaire">
+</form>
+
+</body>
+</html>
